@@ -7,27 +7,40 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta
             name="description"
-            content="A free tool that takes in a 17 character VIN (Vehicle Identification Number) and gives back details about the vehicle's country of origin, manufacturer, model, body style, engine, transmission, tri…">
+            content="A free tool that takes in a 17 character VIN (Vehicle Identification Number) and gives back details about the vehicle's country of origin, manufacturer, model, body style, engine, transmission, tri…A free tool that takes in a 17 character VIN (Vehicle Identification Number) and gives back details about the vehicle's country of origin, manufacturer, model, body style, engine, transmission, trim, model year, and assembly plant">
         <title>VIN Decoder</title>
     </head>
     <body>
-        
-        <h1>VIN Decoder</h1>
-
         <section id="formSection" >
+            <h1>VIN Decoder</h1>
             <form id="form">
                 <label for="vin">VIN:</label>
-                <input type="text" minlength="17" maxlength="17" id="vin" name="vin" style="text-transform: uppercase;" required>
+                <input type="text" minlength="17" id="vin" name="vin" style="text-transform: uppercase;" required>
                 <button type="submit">Submit</button>
             </form>
+        </section>
+
+        <section id="errorSection">
+            <fieldset id="errorFieldSet">
+                <legend>Error</legend>
+                <p id="errorText"></p>
+            </fieldset>
         </section>
 
         <section id="resultSection">
             <fieldset>
                 <legend>Result</legend>
-                <p id="result"></p>
+                <p id="resultVIN"></p>
+                <p id="resultCountry"></p>
+                <p id="resultManufacturer"></p>
+                <p id="resultModel"></p>
+                <p id="resultBodyStyle"></p>
+                <p id="resultEngine"></p>
+                <p id="resultTransmission"></p>
+                <p id="resultTrim"></p>
+                <p id="resultModelYear"></p>
+                <p id="resultAssemblyPlant"></p>
             </fieldset>
         </section>
-
     </body>
 </html>

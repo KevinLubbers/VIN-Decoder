@@ -1,15 +1,30 @@
 body {
-    text-align: center;
+    max-width: fit-content;
+    margin: auto;
 }
 section {
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
     margin-top: 25px;
     margin-bottom: 25px;
 }
-
+#formSection {
+    text-align: center;
+}
+#errorSection{
+   display: none; 
+   color:red;
+}
+#errorFieldSet{
+    border: 1px solid red;
+}
+#errorText {
+    text-align: center;
+}
 #resultSection {
     display: none;
+}
+#resultSection p{
+    text-align:center;
 }
