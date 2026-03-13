@@ -15,7 +15,8 @@ document.getElementById("form").addEventListener("submit", function(e) {
     resultVIN.innerHTML = "VIN: " + vin.toUpperCase();
 
     let resultDisplay = document.getElementById("resultDisplay");
-    splitObject = vinSplit(vin);
+
+    let splitObject = vinSplit(vin);
     resultDisplay.innerHTML = 
     "Country of Origin: " + splitObject.country + "<br>" +
     "Manufacturer: " + splitObject.manufacturer + "<br>" +
@@ -47,12 +48,12 @@ document.getElementById("form").addEventListener("submit", function(e) {
   }
 
   function vinSplit(vin){
-    let splitObject = {};
+    let functionObject = {};
     
     let country = vin.substring(0,2).toUpperCase();
 
     let helper_object = getCountry(country);
-    splitObject.country = helper_object.country;
+    functionObject.country = helper_object.country;
     if (helper_object.country_char_count == 2) {
       
     }
@@ -62,7 +63,7 @@ document.getElementById("form").addEventListener("submit", function(e) {
     let manufacturer = vin.substring(1,2);
     let vehicle_type = vin.substring(2,3);
 
-    return splitObject;
+    return functionObject;
   }
 
   function getManufacturer(manufacturer) {
