@@ -51,7 +51,7 @@ document.getElementById("form").addEventListener("submit", function(e) {
     
     let country = vin.substring(0,2).toUpperCase();
 
-    helper_object = getCountry(country);
+    let helper_object = getCountry(country);
     splitObject.country = helper_object.country;
     if (helper_object.country_char_count == 2) {
       
