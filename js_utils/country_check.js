@@ -390,7 +390,7 @@ export function getCountry(country) {
 
     const oneCharCode = country.slice(0, 1);
     if (vinCountryMap[oneCharCode]) {
-        returnObject.country = vinCountryMap[twoCharCode];
+        returnObject.country = vinCountryMap[oneCharCode];
         returnObject.country_char_count = 1;
         return returnObject;
     }

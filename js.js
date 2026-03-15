@@ -1,4 +1,5 @@
 import { getCountry } from "./js_utils/country_check.js";
+import { getWMI } from "./js_utils/wmi_check.js";
 
 //start on form submit
 document.getElementById("form").addEventListener("submit", function(e) {
@@ -19,7 +20,7 @@ document.getElementById("form").addEventListener("submit", function(e) {
     let splitObject = vinSplit(vin);
     resultDisplay.innerHTML = 
     "Country of Origin: " + splitObject.country + "<br>" +
-    "Manufacturer: " + splitObject.manufacturer + "<br>" +
+    "World Manufacturer Identifier: " + splitObject.wmi+ "<br>" +
     "Model: " + splitObject.model + "<br>" +
     "Body Style: " + splitObject.bodyStyle + "<br>" +
     "Engine: " + splitObject.engine + "<br>" +
@@ -54,14 +55,9 @@ document.getElementById("form").addEventListener("submit", function(e) {
 
     let helper_object = getCountry(country);
     functionObject.country = helper_object.country;
-    if (helper_object.country_char_count == 2) {
-      
-    }
-    else{
-
-    }
-    let manufacturer = vin.substring(1,2);
-    let vehicle_type = vin.substring(2,3);
+    let wmi = vin.substring(0,3).toUpperCase();
+    getWMI(wmi).then(value => {helper_object.wmi = value});
+    console.log(helper_object);
 
     return functionObject;
   }
