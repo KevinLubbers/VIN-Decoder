@@ -56,8 +56,8 @@ document.getElementById("form").addEventListener("submit", function(e) {
     let helper_object = getCountry(country);
     functionObject.country = helper_object.country;
     let wmi = vin.substring(0,3).toUpperCase();
-    getWMI(wmi).then(value => {helper_object.wmi = value});
-    console.log(helper_object);
+    helper_object.wmi = getWMI(wmi);
+    functionObject.wmi = helper_object.wmi;
 
     return functionObject;
   }

@@ -1,4 +1,4 @@
-{
+export default {
     "AAA": "Audi South Africa made by Volkswagen of South Africa",
     "AAK": "FAW Vehicle Manufacturers SA (PTY) Ltd.",
     "AAM": "MAN Automotive (South Africa) (Pty) Ltd. includes VW Truck & Bus",
@@ -1548,4 +1548,4 @@
     "9UW": "Kia made by Nordex S.A.",
     "9V7": "Citroen made by Nordex S.A.",
     "9V8": "Peugeot made by Nordex S.A."
-}
+};
